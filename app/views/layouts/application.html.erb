@@ -1,14 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProLitConference</title>
+  <title>Conference: Proletarian Arts and Culture<%= yield_for(:title, "") %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
+<header>
+<div id="header">
 
+			<div id="main_nav">
+				<div class="nav_conference"><a class="main_nav_link" href="#conference"><span></span></a></div>
+				<div class="nav_research"><a class="main_nav_link" href="#research"><span></span></a></div>
+				<div class="nav_journal"><a class="main_nav_link" href="#journal"><span></span></a></div>
+			</div><!-- ends main_nav -->
+
+			<div id="conf_menu">
+				<ul>
+					<li><%= link_to "Home", page_path("home")%></li>
+					<li><%= link_to "Call for papers", page_path("cfp")%></li>
+					<li><%= link_to "Registration", page_path("registration")%></li>
+					<li><%= link_to "Accommodation", page_path("accommodations")%></li>
+					<li><%= link_to "Travel Information", page_path("travel")%></li>
+					<li><%= link_to "Programme", page_path("programme")%></li>				
+					<li><%= link_to "Arts Festival", page_path("arts")%></li>
+					<li><%= link_to "Around Edmonton", page_path("yeg")%></li>
+					<li><%= link_to "Travel Alberta", page_path("travel_ab")%></li>
+					<li><%= link_to "Contact Us", page_path("contact")%></li>
+				</ul>
+			</div><!-- ends conf_menu -->
+
+</div>
+</header>
 <%= yield %>
-
+<footer>
+<div id="footer">
+	<div class="sitemap">
+		<div class="sitemap_column_short"><h4><a href="/pacp">Home</a></h4>
+			<ul>
+				<li><a href="{pacp-aboutlink}">About</a></li>
+			</ul>
+		</div>
+		<div class="sitemap_column"><h4><%= link_to "Conference", page_path("home")%></h4>
+			<ul>
+			  <li></li>
+				<li><%= link_to "Call for papers", page_path("cfp")%></li>
+				<li><%= link_to "Registration", page_path("registration")%></li>
+				<li><%= link_to "Accommodation", page_path("accommodations")%></li>
+				<li><%= link_to "Travel Information", page_path("travel")%></li>
+				<li><%= link_to "Programme", page_path("programme")%></li>				
+				<li><%= link_to "Arts Festival", page_path("arts")%></li>
+				<li><%= link_to "Around Edmonton", page_path("yeg")%></li>
+			</ul>
+			</div>
+		<div class="sitemap_column"><h4><a href="/pacp-research">Research</a></h4>
+			<ul>
+				<li><a href="#">History</a></li>
+				<li><a href="#">Visual Art</a></li>
+				<li><a href="#">Biography</a></li>					
+				<li><a href="#">Literature</a></li>
+				<li><a href="#">Performance</a></li>															
+				<li><a href="#">Chronology</a></li>														
+			</ul>
+		</div>
+		<div class="sitemap_column_short"><h4><a href="/pacp-journal">Journal</a></h4>
+			<ul>
+				<li><a href="#">Articles</a></li>
+				<li><a href="#">Reviews</a></li>
+				<li><a href="#">Stories</a></li>					
+				<li><a href="#">Poems</a></li>
+				<li><a href="#">Images</a></li>																		
+				<li><a href="#">Performance</a></li>
+			</ul>
+		
+		</div>
+	</div><!-- ends sitemap -->
+	<div id="socialmedia">
+		<div class="sm_facebook"><a class="sm_link" href="http://facebook.com/ProleArts" target="_blank"><span></span></a></div>
+		<div class="sm_rss"><a class="sm_link" href="http://rss.com"><span></span></a></div>
+		<div class="sm_twitter"><a class="sm_link" href="http://twitter.com/#!/ProletarianArts" target="_blank"><span></span></a></div>
+	</div><!-- ends socialmedia -->
+	<div id="credits">
+		<div class="copyright">&copy; 2011 Proletarian Arts and Culture</div>
+		<p>Contact information goes here | email: <a href="email:proletarianarts@gmail.com">proletarianarts@gmail.com</a></p>
+	</div><!-- ends socialmedia -->				
+</div><!-- ends footer -->
+</footer>
 </body>
 </html>
