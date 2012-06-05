@@ -23,21 +23,18 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
+  gem "rspec-rails"
   gem 'sqlite3'
 end
 
 group :test do
-  gem "rspec-rails",        :git => "git://github.com/rspec/rspec-rails.git"
-  gem "rspec",              :git => "git://github.com/rspec/rspec.git"
-  gem "rspec-core",         :git => "git://github.com/rspec/rspec-core.git"
-  gem "rspec-expectations", :git => "git://github.com/rspec/rspec-expectations.git"
-  gem "rspec-mocks",        :git => "git://github.com/rspec/rspec-mocks.git"
+  gem "rspec-rails"
+  gem "rspec"
+  gem "rspec-core"
+  gem "rspec-expectations"
+  gem "rspec-mocks"
   gem 'rack-test'
   gem 'shoulda'
   gem 'shoulda-matchers'
 end
 
-# Rails 3.1 - Heroku
-group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
-end
