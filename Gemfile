@@ -2,8 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'high_voltage'
 gem 'heroku'
@@ -24,7 +22,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem "rspec-rails"
-  gem 'sqlite3'
+  gem 'pry-rails'
 end
 
 group :test do

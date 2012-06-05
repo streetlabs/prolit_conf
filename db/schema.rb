@@ -11,6 +11,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20081014053040) do
+
+  create_table "attendees", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "institution"
+    t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "papers", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "keynote"
+    t.integer  "presentation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "presentations", :force => true do |t|
+    t.string   "title"
+    t.integer  "chair_id"
+    t.boolean  "plenary"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "talks", :force => true do |t|
+    t.integer  "paper_id"
+    t.integer  "attendee_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
