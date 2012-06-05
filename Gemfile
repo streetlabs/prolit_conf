@@ -26,6 +26,7 @@ group :test, :development do
 end
 
 group :test do
+  gem "factory_girl_rails"
   gem "rspec-rails"
   gem "rspec"
   gem "rspec-core"
