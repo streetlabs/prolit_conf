@@ -142,7 +142,7 @@ body {
 	width: 1000px;
 	height: 362px;
 	margin: 0px auto;
-	background: url("/assets/conference_header.png") no-repeat;
+        background: url("/assets/conference_header.png") no-repeat;
 	position: relative;
 }
 
@@ -151,7 +151,6 @@ body {
 	width: 1000px;
 	margin: 0px auto;
 	color: #333;
-	background: #fff url("/assets/body_footer_transition.png") no-repeat bottom;
 }
 
 .content_inner {
@@ -162,6 +161,14 @@ body {
 .content_inner p {
 	font-size: 16px;
 	line-height: 28px;
+}
+
+#conf_content_transition {
+	width: 1000px;
+	height: 29px;
+	margin: 0px auto;
+	background: #fff url("/assets/body_footer_transition.png") no-repeat bottom;
+	overflow: hidden;
 }
 
 #conf_menu {
@@ -240,59 +247,9 @@ body {
 	float: left;
 	width: 100px;
 }
-	
 
-/* ====== social media links ====== */
+/* ====== intersite nav ====== */
 
-#socialmedia {
-	position: absolute;
-	right: 30px;
-	top: -32px;
-	width: 250px;
-	height: 100px;
-}
-
-a.sm_link {
-	display:block;
-	width: 83px;
-	height:100px;
-	position:relative;
-	margin: 0px;
-	text-indent: -9999px;
-}
-
-a.sm_link:hover {
-	cursor: pointer;
-}
-
-.sm_twitter {
-	position: absolute;
-	left: 0px;
- 	background: url("/assets/socialmediaicons-conf.jpg") -250px 0px no-repeat;
- 	width: 83px;
- 	height: 100px;
- 	overflow: hidden;
-}
-
-.sm_rss {
-	position: absolute;
-	left: 84px;
- 	background: url("/assets/socialmediaicons-conf.jpg") -84px 0px no-repeat;
- 	width: 83px;
- 	height: 100px;
- 	overflow: hidden;
-}
-
-.sm_facebook {
-	position: absolute;
-	left: 167px;
- 	background: url("/assets/socialmediaicons-conf.jpg") -164px 0px no-repeat;
- 	width: 83px;
- 	height: 100px;
-  	overflow: hidden;	
-}
-
-/* ====== main navigation links ====== */
 #main_nav {
 	position: absolute;
 	right: 20px;
@@ -301,6 +258,33 @@ a.sm_link:hover {
 	height: 160px;
 }
 
+#main_nav a span { /* common attributes of the mouseover */
+		display:block;
+		height:100%;
+		width:100%;
+		z-index:100;
+}
+
+#main_nav a span:hover {
+		cursor:pointer;
+}
+
+/* Shift background position on hover for the class: "home" */
+#main_nav .nav_conference a span {
+		background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll 0px 0px;
+}
+	
+/* Shift background position on hover for the class: "portfolio" */
+#main_nav .nav_research a span {
+		background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll -88px 0px;
+}
+	
+/* Shift background position on hover for the class: "portfolio" */
+#main_nav .nav_journal a span {
+		background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll -171px 0px;                                           
+}	
+
+
 .nav_conference {
 	position: absolute;
 	left: 0px;
@@ -308,16 +292,6 @@ a.sm_link:hover {
  	width: 90px;
  	height: 160px;
  	overflow: hidden;
-}
-
-a.main_nav_link {
-	display:block;
-	width: 83px;
-	height:160px;
-	position:relative;
-	margin: 0px;
-	overflow:hidden;
-	text-indent: -9999px;
 }
 
 .nav_research {
@@ -337,6 +311,79 @@ a.main_nav_link {
  	height: 160px;
   	overflow: hidden;	
 }
+
+/* ====== social media links ====== */
+
+#socialmedia {
+	position: absolute;
+	right: 30px;
+	top: -32px;
+	width: 250px;
+	height: 100px;
+}
+
+#socialmedia a span { /* common attributes of the mouseover */
+		display:block;
+		height:100%;
+		width:100%;
+		z-index:100;
+}
+
+#socialmedia a span:hover {
+		cursor:pointer;
+}
+
+a.sm_link {
+	display:block;
+	width: 83px;
+	height:100px;
+	position:relative;
+	margin: 0px;
+	text-indent: -9999px;
+}
+
+.sm_twitter {
+	position: absolute;
+	left: 0px;
+ 	background: url("/assets/socialmediaicons-conf.jpg") -250px 0px no-repeat;
+ 	width: 83px;
+ 	height: 100px;
+ 	overflow: hidden;
+}
+
+.sm_rss {
+	position: absolute;
+	left: 84px;
+ 	background: url("/assets/socialmediaicons-conf.jpg") -334px 0px no-repeat;
+ 	width: 83px;
+ 	height: 100px;
+ 	overflow: hidden;
+}
+
+.sm_facebook {
+	position: absolute;
+	left: 167px;
+ 	background: url("/assets/socialmediaicons-conf.jpg") -414px 0px no-repeat;
+ 	width: 83px;
+ 	height: 100px;
+  	overflow: hidden;	
+}
+
+/* Shift background position on hover for the class: "sm_twitter" */
+#socialmedia .sm_twitter a span {
+		background:url("/assets/socialmediaicons-conf.jpg") no-repeat scroll 0px 0px;
+}
+	
+/* Shift background position on hover for the class: "portfolio" */
+#socialmedia .sm_rss a span {
+		background:url("/assets/socialmediaicons-conf.jpg") no-repeat scroll -84px 0px;
+}
+	
+/* Shift background position on hover for the class: "portfolio" */
+#socialmedia .sm_facebook a span {
+		background:url("/assets/socialmediaicons-conf.jpg") no-repeat scroll -163px 0px;
+}	
+
 
 /* ====== credits ====== */
 
