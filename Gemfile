@@ -23,6 +23,7 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'cancan'
 
 group :test, :development do
   gem "rspec-rails"
