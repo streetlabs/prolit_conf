@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Vonnes; src: url("/assets/vonnes-boldcondensed.ttf");
+	font-family: VonnesCompressed; src: url("/assets/vonnes-boldcompressed.ttf");
+}
+
 #background {
   background: url("/assets/background-main.jpg") repeat-y scroll 0 0 transparent;
   margin: 0 auto;
@@ -47,11 +52,27 @@ header {
 }
 
 #sidebar {
+  font-family: VonnesCompressed, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 28px;
   padding: 20px;
+
+  ul {
+    list-style-type: none;
+    li {
+      text-align: right;
+      margin: 0px;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 #right-content {
   color: #333;
+  font-family: Vonnes, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
   padding: 20px;
 }
 
@@ -61,15 +82,30 @@ header {
 }
 
 footer {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #EEEEEE;
   height: 200px;
   padding-top: 20px;
 
   ul { list-style-type: none; }
-  a { text-decoration: none;  }
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  h4 {
+    margin-bottom: 0px;
+    a {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
 
   #social-links {
-    margin-top:  -52px;
+    margin-top: -52px;
+    margin-left: 40px;
 
     div {
       width:  83px;
@@ -97,6 +133,20 @@ footer {
       }
     }
   }
+
+  .copyright {
+    font-family: Vonnes, serif;
+    font-size: 20px;
+    margin-left: 75px;
+    color: #fff;
+    text-transform: capitalize;
+  }
+
+  .contact-email {
+    margin-right: 30px;
+    text-align: right
+  }
+
 }
 
 .mtop20 { margin-top: 20px; }
