@@ -16,6 +16,9 @@ class Attendee < ActiveRecord::Base
   has_many :chairs, :class_name => 'Presentation', :foreign_key => 'chair_id'
   has_many :talks
   has_many :papers, :through => :talks
+  has_one  :user, :inverse_of => :attendee
+
+  attr_accessible :name
 
   # Hash of Roles
   ROLES = {
