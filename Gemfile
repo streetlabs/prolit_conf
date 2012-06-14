@@ -24,6 +24,7 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'cancan'
+gem 'formtastic'
 
 group :test, :development do
   gem "rspec-rails"

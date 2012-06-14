@@ -95,6 +95,8 @@ GEM
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.3)
+    formtastic (2.1.1)
+      actionpack (~> 3.0)
     gherkin (2.11.0)
       json (>= 1.4.6)
     heroku (2.26.3)
@@ -228,6 +230,7 @@ DEPENDENCIES
   email_spec
   factory_girl_rails
   fog
+  formtastic
   heroku
   high_voltage
   jquery-rails
