@@ -147,4 +147,39 @@ footer {
 
 }
 
+#flash-notice {
+  position: fixed;
+  top: 0px;
+  border: 2px solid black;
+  border-radius: 4px;
+  text-align: center;
+  width: 958px;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+
+  div {
+    opacity: 0.9;
+    height: 20px;
+    padding: 10px;
+  }
+  .flash-success { background: green; }
+  .flash-failure { background: red; }
+
+  .flash-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.3) url(/assets/close.png) no-repeat center center;
+    z-index: 101;
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    cursor:pointer;
+    padding: 0px;
+  }
+}
+
 .mtop20 { margin-top: 20px; }

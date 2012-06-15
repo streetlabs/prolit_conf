@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Conference: Proletarian Arts and Culture<%= yield_for(:title, "") %></title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-<body>
-  <div id="background">
-    <div class="container_12">
-      <%= render :partial => "layouts/header" -%>
+  <head>
+    <title>Conference: Proletarian Arts and Culture<%= yield_for(:title, "") %></title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+	 <meta name="author" content="">
+	 <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+  <body>
+    <div id="background">
+      <div class="container_12">
+        <%= render :partial => "shared/flash_notice" -%>
+        <%= render :partial => "layouts/header" -%>
 
-      <div id="main-content">
-        <div class="grid_4 alpha"><%= render :partial => "layouts/sidebar" -%></div>
-        <div class="grid_8 omega"><div id="right-content"><%= yield %></div></div>
+        <div id="main-content">
+          <div class="grid_4 alpha"><%= render :partial => "layouts/sidebar" -%></div>
+          <div class="grid_8 omega"><div id="right-content"><%= yield %></div></div>
+          <div class="clear"></div>
+        </div>
         <div class="clear"></div>
+
+        <div class="content-transition"></div>
+        <div class="clear"></div>
+
+        <%= render :partial => "layouts/footer" -%>
       </div>
-      <div class="clear"></div>
-
-      <div class="content-transition"></div>
-      <div class="clear"></div>
-
-      <%= render :partial => "layouts/footer" -%>
     </div>
-  </div>
 
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
-</body>
+  </body>
 </html>
