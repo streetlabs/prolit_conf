@@ -43,5 +43,24 @@ describe Attendee do
         roles.each { |r| user.send("#{r}?").should be_true }
       end
     end
+
+    it "should set valid roles properly" do
+      attendee = FactoryGirl.create(:attendee)
+      expected = [
+                  [:presenter, :keynote],
+                  [:presenter, :chair],
+                  [:attendee,  :chair, :admin]
+                 ]
+
+      expected.each do |roles|
+        attendee.set_roles!(roles)
+        attendee.get_roles.should == roles
+      end
+    end
+
+    it "should not set invalid roles" do
+      attendee = FactoryGirl.create(:attendee)
+      expect { attendee.set_roles!([:coordinator]) }.to raise_error(Attendee::UnknownRole)
+    end
   end
 end

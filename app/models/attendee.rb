@@ -32,6 +32,13 @@ class Attendee < ActiveRecord::Base
 
   validates :roles, :inclusion => { :in => ROLES.values.min..ROLES.values.sum }
 
+  class UnknownRole < ActiveRecord::ActiveRecordError
+    def initialize(message)
+      @message = message
+    end
+    attr_reader :message
+  end
+
   def get_roles
     # bitwise-and with each role value, and pick them
     ROLES.reject { |k, v| (self.roles & v) == 0 }.keys
@@ -44,5 +51,17 @@ class Attendee < ActiveRecord::Base
         get_roles.include?(:#{role})
       end
     RUBY
+  end
+
+  def set_roles!(roles)
+    self.roles = 0
+    roles.each do |role|
+      unless ROLES.keys.include?(role)
+        raise Attendee::UnknownRole.new("unknown role=#{role.to_s}")
+      end
+
+      self.roles |= ROLES[role]
+    end
+    save!
   end
 end
