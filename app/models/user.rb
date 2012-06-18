@@ -10,6 +10,17 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :attendee
   attr_accessible :attendee_attributes
 
+  def activate!
+    self.approved = true
+    save!
+  end
+  alias approve! activate!
+
+  def deactivate!
+    self.approved = false
+    save!
+  end
+
   # https://github.com/plataformatec/devise/wiki/How-To:-Require-admin-to-activate-account-before-sign_in
   def active_for_authentication?
     super && approved?
