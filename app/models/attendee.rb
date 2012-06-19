@@ -19,6 +19,7 @@ class Attendee < ActiveRecord::Base
   has_one  :user, :inverse_of => :attendee
 
   attr_accessible :name
+  delegate :email, :confirmed?, :approved?, :to => :user
 
   # Hash of Roles
   ROLES = {
