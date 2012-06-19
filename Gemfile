@@ -22,9 +22,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'devise'
+gem 'activeadmin'
 gem 'cancan'
-gem 'formtastic'
 
 group :test, :development do
   gem "rspec-rails"
