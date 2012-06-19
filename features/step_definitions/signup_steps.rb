@@ -1,4 +1,3 @@
-
 Given /^I am on signup page$/ do
   visit new_user_path
 end
@@ -16,6 +15,16 @@ Given /^I try to login as "(.*?)"$/ do |name|
   fill_in("user_email", :with => name + "@example.com")
   fill_in("user_password", :with => "password")
   click_button("Sign in")
+end
+
+Given /^I login as "(.*?)"$/ do |name|
+  step %Q{I try to login as "#{name}"}
+  page.should have_content("Signed in successfully.")
+end
+
+Then /^I logout successfully$/ do
+  click_link("Logout")
+  page.should have_content("Signed out successfully.")
 end
 
 Given /^I confirm "(.*?)" via email$/ do |name|

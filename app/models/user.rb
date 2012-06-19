@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   belongs_to :attendee, :inverse_of => :user
   accepts_nested_attributes_for :attendee
   attr_accessible :attendee_attributes
+  delegate :name, :admin?, :to => :attendee
 
   def activate!
     self.approved = true
