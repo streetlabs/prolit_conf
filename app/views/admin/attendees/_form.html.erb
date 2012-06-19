@@ -1,0 +1,28 @@
+<%= semantic_form_for [:admin, @attendee] do |f| -%>
+  <%= f.inputs do -%>
+    <%= f.input :name -%>
+    <%= f.input :title -%>
+    <%= f.input :institution -%>
+    <%= f.input :bio -%>
+
+    <li id="attendee_role_ids_input" class="check_boxes input required">
+      <fieldset class="choices">
+        <legend class="label">
+          <label> Role Ids <abbr title="required">*</abbr> </label>
+        </legend>
+        <ol class="choices-group">
+          <%- Attendee::ROLES.each do |key, value| -%>
+            <li class="choice">
+              <%= label_tag "role_#{value}" do -%>
+                <%= check_box_tag "attendee[role_ids][]", value, @attendee.get_roles.include?(key), :id => "role_#{value}" -%>
+                <%= key.to_s.capitalize -%>
+              <% end -%>
+            </li>
+          <% end -%>
+        </ol>
+      </fieldset>
+    </li>
+
+  <% end -%>
+  <%= f.actions -%>
+<% end -%>

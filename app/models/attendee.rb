@@ -18,7 +18,7 @@ class Attendee < ActiveRecord::Base
   has_many :papers, :through => :talks
   has_one  :user, :inverse_of => :attendee
 
-  attr_accessible :name
+  attr_accessible :name, :title, :institution, :bio, :roles
   delegate :email, :confirmed?, :approved?, :to => :user
 
   # Hash of Roles
