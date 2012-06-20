@@ -26,4 +26,22 @@ ActiveAdmin.register Attendee do
       end
     end
   end
+
+  member_action :activate do
+    @attendee = Attendee.find(params[:id])
+    if @attendee && @attendee.user.activate!
+      redirect_to :action => :show, :notice => "Attendee Account Activated!"
+    else
+      redirect_to :action => :index, :notice => "Failed to Activate!"
+    end
+  end
+
+  member_action :deactivate do
+    @attendee = Attendee.find(params[:id])
+    if @attendee && @attendee.user.deactivate!
+      redirect_to :action => :show, :notice => "Attendee Account De-Activated!"
+    else
+      redirect_to :action => :index, :notice => "Failed to De-Activate!"
+    end
+  end
 end

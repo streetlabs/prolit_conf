@@ -1,3 +1,17 @@
+<div id="attendee-status-actions">
+  <h4>
+    <strong>Account Status:</strong>
+    <%- if @attendee.approved? -%>
+      This Account is currently <strong>Activate</strong>
+      <%= link_to "De-Activate", deactivate_admin_attendee_path(@attendee) -%>
+    <%- else -%>
+      This Account is currently <strong>De-Activated</strong>
+      <%= link_to "Activate", activate_admin_attendee_path(@attendee) -%>
+    <% end -%>
+  </h4>
+</div>
+
+
 <%= semantic_form_for [:admin, @attendee] do |f| -%>
   <%= f.inputs do -%>
     <%= f.input :name -%>
@@ -5,6 +19,7 @@
     <%= f.input :institution -%>
     <%= f.input :bio -%>
 
+    <!-- big hack for working around with displaying roles as set of check boxes -->
     <li id="attendee_role_ids_input" class="check_boxes input required">
       <fieldset class="choices">
         <legend class="label">
@@ -13,8 +28,8 @@
         <ol class="choices-group">
           <%- Attendee::ROLES.each do |key, value| -%>
             <li class="choice">
-              <%= label_tag "role_#{value}" do -%>
-                <%= check_box_tag "attendee[role_ids][]", value, @attendee.get_roles.include?(key), :id => "role_#{value}" -%>
+              <%= label_tag "attendee_role_#{value}" do -%>
+                <%= check_box_tag "attendee[role_ids][]", value, @attendee.get_roles.include?(key), :id => "attendee_role_#{value}" -%>
                 <%= key.to_s.capitalize -%>
               <% end -%>
             </li>
