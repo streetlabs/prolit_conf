@@ -1,0 +1,6 @@
+<h3> Hello Admin, </h3>
+<p>
+  A new user '<%= @user.name -%>' has registered. Please visit
+  <%= link_to "here", edit_admin_attendee_path(@user.attendee) -%>
+  to activate the account.
+</p>

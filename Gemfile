@@ -22,6 +22,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'activeadmin'
+gem 'cancan'
 
 group :test, :development do
   gem "rspec-rails"
@@ -38,5 +40,9 @@ group :test do
   gem 'rack-test'
   gem 'shoulda'
   gem 'shoulda-matchers'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem "capybara-webkit"
+  gem 'email_spec'
 end
-

@@ -1,0 +1,185 @@
+@font-face {
+	font-family: Vonnes; src: url("/assets/vonnes-boldcondensed.ttf");
+	font-family: VonnesCompressed; src: url("/assets/vonnes-boldcompressed.ttf");
+}
+
+#background {
+  background: url("/assets/background-main.jpg") repeat-y scroll 0 0 transparent;
+  margin: 0 auto;
+  width: 1160px;
+}
+
+header {
+  background: url("/assets/conference-header.png") no-repeat;
+  height: 348px;
+
+  #navigation-links {
+    margin-top: 6px;
+
+    div {
+      width:  83px;
+      height: 160px;
+      float:  left;
+      overflow: hidden;
+    }
+
+    #nav-conference {
+      background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll -255px 0px;
+      &:hover {
+        background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll 0px 0px;
+      }
+    }
+    #nav-research {
+      background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll -343px 0px;
+      &:hover {
+        background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll -88px 0px;
+      }
+    }
+    #nav-journal {
+      background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll -427px 0px;
+      &:hover {
+        background:url("/assets/navigationmenu-conf.jpg") no-repeat scroll -171px 0px;
+      }
+    }
+  }
+}
+
+#main-content {
+  background: url("/assets/body-background.png") repeat-y scroll 0 0 white;
+}
+
+#sidebar {
+  font-family: VonnesCompressed, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  padding: 20px;
+  margin-top: -150px;
+
+  ul {
+    list-style-type: none;
+    li {
+      text-align: right;
+      margin: 0px;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#right-content {
+  color: #333;
+  font-family: Vonnes, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.content-transition {
+	height: 28px;
+	background: #fff url("/assets/body-footer-transistion.png") no-repeat bottom;
+}
+
+footer {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #EEEEEE;
+  height: 200px;
+  padding-top: 20px;
+
+  ul { list-style-type: none; }
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  h4 {
+    margin-bottom: 0px;
+    a {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  #social-links {
+    margin-top: -52px;
+    margin-left: 40px;
+
+    div {
+      width:  83px;
+      height: 100px;
+      float:  left;
+      overflow: hidden;
+    }
+
+    #sl-twitter {
+      background: url("/assets/socialmediaicons-conf.jpg") -250px 0px no-repeat;
+      &:hover {
+        background: url("/assets/socialmediaicons-conf.jpg") 0px 0px no-repeat;
+      }
+    }
+    #sl-rss {
+      background: url("/assets/socialmediaicons-conf.jpg") -334px 0px no-repeat;
+      &:hover {
+        background: url("/assets/socialmediaicons-conf.jpg") -84px 0px no-repeat;
+      }
+    }
+    #sl-facebook {
+      background: url("/assets/socialmediaicons-conf.jpg") -414px 0px no-repeat;
+      &:hover {
+        background: url("/assets/socialmediaicons-conf.jpg") -163px 0px no-repeat;
+      }
+    }
+  }
+
+  .copyright {
+    font-family: Vonnes, serif;
+    font-size: 20px;
+    margin-left: 75px;
+    color: #fff;
+    text-transform: capitalize;
+  }
+
+  .contact-email {
+    margin-right: 30px;
+    text-align: right
+  }
+
+}
+
+#flash-notice {
+  position: fixed;
+  top: 0px;
+  border: 2px solid black;
+  border-radius: 4px;
+  text-align: center;
+  width: 958px;
+  font-weight: bold;
+  font-size: 12px;
+  color: black;
+
+  div {
+    opacity: 0.9;
+    height: 20px;
+    padding: 10px;
+  }
+  .flash-success { background: green; }
+  .flash-failure { background: red; }
+
+  .flash-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.3) url(/assets/close.png) no-repeat center center;
+    z-index: 101;
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    cursor:pointer;
+    padding: 0px;
+  }
+}
+
+.mtop20 { margin-top: 20px; }

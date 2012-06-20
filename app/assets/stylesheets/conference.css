@@ -147,11 +147,11 @@ body {
 }
 
 /* ====== content ====== */
-#content {
-	width: 1000px;
-	margin: 0px auto;
-	color: #333;
-}
+/* #content { */
+/* 	width: 1000px; */
+/* 	margin: 0px auto; */
+/* 	color: #333; */
+/* } */
 
 .content_inner {
 	padding: 48px 48px 48px 346px;

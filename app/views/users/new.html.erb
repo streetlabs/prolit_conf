@@ -1,0 +1,11 @@
+<%= semantic_form_for @user do |f| -%>
+  <%= f.semantic_fields_for :attendee do |attendee| -%>
+    <%= attendee.inputs :name -%>
+  <% end -%>
+
+  <%= f.inputs :email, :password, :password_confirmation -%>
+
+  <%= f.actions do -%>
+    <%= f.action :submit, :label => "Signup" -%>
+  <% end -%>
+<% end -%>
