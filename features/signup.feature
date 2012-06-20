@@ -4,6 +4,7 @@ Feature: As an User
   I want signup and play with registration process
 
   Scenario: Able to Signup, able to resend instructions, and reset password
+    Given an admin "Administrator"
     Given I am on signup page
     And I sign as "OxygenSmith"
     Then I should see "Signup Complete. Please Check Your Email"

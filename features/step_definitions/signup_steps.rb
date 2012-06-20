@@ -17,7 +17,7 @@ Given /^I try to login as "(.*?)"$/ do |name|
   click_button("Sign in")
 end
 
-Given /^I login as "(.*?)"$/ do |name|
+Given /^I login as "([^\"]*)"$/ do |name|
   step %Q{I try to login as "#{name}"}
   page.should have_content("Signed in successfully.")
 end
@@ -43,4 +43,9 @@ Given /^Admin approves "(.*?)"$/ do |name|
 
   # purposefully skip validations here
   user.update_column(:approved, true)
+end
+
+Given /^I login as "(.*?)" to access "(.*?)"$/ do |name, link|
+  step %Q{I login as "#{name}"}
+  click_link(link)
 end
