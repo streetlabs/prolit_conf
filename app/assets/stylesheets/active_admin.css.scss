@@ -1,0 +1,22 @@
+// Active Admin CSS Styles
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+// To customize the Active Admin interfaces, add your
+// styles here:
+
+#attendee-status-actions {
+  @include rounded();
+  @include section-background();
+  margin-bottom: 40px;
+  padding: 15px;
+
+  h4 {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  a {
+    @include default-button();
+    margin-left: 20px;
+  }
+}
