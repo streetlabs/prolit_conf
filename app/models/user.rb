@@ -11,15 +11,24 @@ class User < ActiveRecord::Base
   attr_accessible :attendee_attributes
   delegate :name, :admin?, :to => :attendee
 
+  alias devise_confirm! confirm!
+  def confirm!
+    if devise_confirm!
+      UserStatusMailer.activation_request(self).deliver
+    end
+  end
+
   def activate!
     self.approved = true
     save!
+    UserStatusMailer.account_activated(self).deliver
   end
   alias approve! activate!
 
   def deactivate!
     self.approved = false
     save!
+    UserStatusMailer.account_deactivated(self).deliver
   end
 
   # https://github.com/plataformatec/devise/wiki/How-To:-Require-admin-to-activate-account-before-sign_in
