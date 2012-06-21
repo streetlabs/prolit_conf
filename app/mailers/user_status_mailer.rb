@@ -7,7 +7,7 @@ class UserStatusMailer < ActionMailer::Base
     # in case we fail to find any admin, then send mail to default email
     admin = Attendee.where("roles >= ?", Attendee::ROLES[:admin]).first
     email = admin && admin.email || "proletarianarts@gmail.com"
-    mail :to => admin.email, :subject => "Account Activation Required"
+    mail :to => email, :subject => "Account Activation Required"
   end
 
   def account_activated(user)
