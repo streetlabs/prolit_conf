@@ -23,7 +23,8 @@ Given /^I login as "([^\"]*)"$/ do |name|
 end
 
 Then /^I logout successfully$/ do
-  click_link("Logout")
+  link = page.text.match(/LOGOUT/) ? "LOGOUT" : "Logout"
+  click_link(link)
   page.should have_content("Signed out successfully.")
 end
 

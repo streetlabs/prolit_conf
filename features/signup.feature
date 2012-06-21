@@ -14,5 +14,5 @@ Feature: As an User
     And I try to login as "OxygenSmith"
     Then I should see "Your account has not been approved by admin yet."
     And Admin approves "OxygenSmith"
-    And I try to login as "OxygenSmith"
-    Then I should see "Signed in successfully."
+    And I login as "OxygenSmith"
+    And I logout successfully
