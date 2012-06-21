@@ -45,4 +45,8 @@ group :test do
   gem 'capybara'
   gem "capybara-webkit"
   gem 'email_spec'
+  gem "headless"
+  gem "ci_reporter"
+  gem 'simplecov', :platform => :mri_19
+  gem 'simplecov-rcov', :require => false
 end

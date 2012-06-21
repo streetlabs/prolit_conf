@@ -3,17 +3,15 @@ development:
   reconnect: false
   pool: 5
   host: localhost
-  username: hemant
-  password: 
+  password:
   database: prolit_conf_development
 
-test:
+test: &test
   adapter: postgresql
   reconnect: false
   pool: 5
   host: localhost
-  username: hemant
-  password: 
+  password:
   database: prolit_conf_test
 
 production:
@@ -21,6 +19,8 @@ production:
   reconnect: false
   pool: 5
   host: localhost
-  username: hemant
-  password: 
+  password:
   database: prolit_conf_production
+
+cucumber:
+  <<: *test

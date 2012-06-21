@@ -6,4 +6,5 @@ tmp/
 /vendor/ruby
 /config/database.yml
 .powrc
+reports/
 
