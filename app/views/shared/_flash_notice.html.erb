@@ -1,24 +1,25 @@
-<div id="flash-notice">
-  <%- unless flash[:notice].blank? -%>
-    <div class="flash-success">
-      <%= flash[:notice] -%>
-    </div>
-  <% end -%>
+<%- if flash[:notice] || flash[:error] || flash[:alert] -%>
+  <div id="flash-notice">
+    <%- unless flash[:notice].blank? -%>
+      <div class="flash-success">
+        <%= flash[:notice] -%>
+      </div>
+    <% end -%>
 
-  <%- unless flash[:error].blank? -%>
-    <div class="flash-failure">
-      <%= flash[:error] -%>
-    </div>
-  <% end -%>
+    <%- unless flash[:error].blank? -%>
+      <div class="flash-failure">
+        <%= flash[:error] -%>
+      </div>
+    <% end -%>
 
-  <%- unless flash[:alert].blank? -%>
-    <div class="flash-failure">
-      <%= flash[:alert] -%>
-    </div>
-  <% end -%>
+    <%- unless flash[:alert].blank? -%>
+      <div class="flash-failure">
+        <%= flash[:alert] -%>
+      </div>
+    <% end -%>
 
-  <%- if flash[:notice] || flash[:error] || flash[:alert] -%>
     <div class="flash-close"></div>
-  <% end -%>
-</div>
+  </div>
+<% end -%>
+
 <div class="clear"></div>
