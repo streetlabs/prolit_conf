@@ -16,7 +16,7 @@ class Attendee < ActiveRecord::Base
   has_many :chairs, :class_name => 'Presentation', :foreign_key => 'chair_id'
   has_many :talks
   has_many :papers, :through => :talks
-  has_one  :user, :inverse_of => :attendee
+  has_one  :user, :inverse_of => :attendee, :dependent => :destroy
 
   attr_accessible :name, :title, :institution, :bio, :roles
   delegate :email, :confirmed?, :approved?, :to => :user
