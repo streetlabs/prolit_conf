@@ -6,4 +6,6 @@ tmp/
 /vendor/ruby
 /config/database.yml
 .powrc
-/public/assets/
+/public/assets/**/*
+!/public/assets/.gitkeep
+
