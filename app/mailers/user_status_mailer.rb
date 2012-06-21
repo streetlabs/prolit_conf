@@ -1,5 +1,5 @@
 class UserStatusMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "ProletarianArts@gmail.com"
 
   def activation_request(user)
     @user = user
