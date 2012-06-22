@@ -19,6 +19,9 @@ task :create_pages => :environment do
   pages_info.each do |info|
     content = File.read(pages_path + "/" + info[:identifier] + ".html")
     params = info.merge(:content => content)
+
+    page = Page.find_by_identifier(params[:identifier])
+    page.destroy if page
     Page.create!(params)
   end
 end
