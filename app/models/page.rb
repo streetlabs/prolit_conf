@@ -1,3 +1,4 @@
 class Page < ActiveRecord::Base
-  attr_accessible :title, :content
+  validates :identifier, :presence => true, :uniqueness => true
+  attr_accessible :identifier, :title, :content
 end

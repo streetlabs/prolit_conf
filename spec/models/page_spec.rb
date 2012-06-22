@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Page do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Creation of Pages" do
+    subject { FactoryGirl.create(:page) }
+    it { should validate_presence_of(:identifier)   }
+    it { should validate_uniqueness_of(:identifier) }
+  end
 end
