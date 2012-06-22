@@ -6,12 +6,13 @@ task :create_pages => :environment do
   pages_info =
     [
      { :identifier => "accommodations",     :title => "Accommodations"     },
-     { :identifier => "around_alberta",     :title => "Around Alberta"     },
+     { :identifier => "around_edmonton",    :title => "Around Edmonton"    },
      { :identifier => "arts",               :title => "Arts Festival"      },
      { :identifier => "call_for_papers",    :title => "Call for Papers"    },
      { :identifier => "contact_us",         :title => "Contact Us"         },
      { :identifier => "home",               :title => "Home"               },
      { :identifier => "programme",          :title => "Programme"          },
+     { :identifier => "registration",       :title => "Registration"       },
      { :identifier => "travel_alberta",     :title => "Travel Alberta"     },
      { :identifier => "travel_information", :title => "Travel Information" }
     ]
