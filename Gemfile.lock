@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/iffyuva/wymeditor-rails.git
+  revision: 9871b5d5fce7f13a3296ab35a8864e8ac5e9f7a8
+  specs:
+    wymeditor-rails (0.0.1)
+      jquery-rails
+      rails (> 3.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -289,3 +297,4 @@ DEPENDENCIES
   simplecov
   simplecov-rcov
   uglifier (>= 1.0.3)
+  wymeditor-rails!

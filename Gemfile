@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 gem 'activeadmin'
 gem 'cancan'
+gem 'wymeditor-rails', :git => "git://github.com/iffyuva/wymeditor-rails.git"
 
 group :test, :development do
   gem "rspec-rails"
