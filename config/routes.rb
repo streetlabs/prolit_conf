@@ -3,7 +3,7 @@ ProLitConference::Application.routes.draw do
 
   devise_for :users
   resources  :users, :only => [:new, :create]
+  resources  :pages, :only => :show
 
-  match 'pages/home' => 'high_voltage/pages#show', :id => 'home'
-  root :to => 'high_voltage/pages#show', :id => 'home'
+  root :to => "pages#show", :id => -1
 end

@@ -1,15 +1,9 @@
 <div id="sidebar">
   <ul>
-    <li><%= link_to "HOME", page_path("home")%></li>
-    <li><%= link_to "CALL FOR PAPERS", page_path("cfp")%></li>
-    <li><%= link_to "REGISTRATION", page_path("registration")%></li>
-    <li><%= link_to "ACCOMMODATION", page_path("accommodations")%></li>
-    <li><%= link_to "TRAVEL INFORMATION", page_path("travel")%></li>
-    <li><%= link_to "PROGRAMME", page_path("programme")%></li>
-    <li><%= link_to "ARTS FESTIVAL", page_path("arts")%></li>
-    <li><%= link_to "AROUND EDMONTON", page_path("yeg")%></li>
-    <li><%= link_to "TRAVEL ALBERTA", page_path("travel_ab")%></li>
-    <li><%= link_to "CONTACT US", page_path("contact")%></li>
+    <%- default_pages_links.each do |link| -%>
+      <li><%= link -%></li>
+    <% end -%>
+
     <%- if user_signed_in? -%>
       <li><%= user_signout_link %></li>
     <%- else -%>

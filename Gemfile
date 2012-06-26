@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.5'
 
-gem 'high_voltage'
 gem 'heroku'
 gem 'pg'
 gem 'fog'

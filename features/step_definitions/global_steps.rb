@@ -39,3 +39,7 @@ end
 When /^I wait for the AJAX call to finish$/ do
   wait_for_ajax_call_to_finish
 end
+
+Given /^I am on home page$/ do
+  visit root_path
+end
