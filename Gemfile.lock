@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/iffyuva/wymeditor-rails.git
-  revision: 9871b5d5fce7f13a3296ab35a8864e8ac5e9f7a8
+  revision: daf607cb53f2dd31ee82a6cccce92a4b7857336f
   specs:
     wymeditor-rails (0.0.1)
       jquery-rails
