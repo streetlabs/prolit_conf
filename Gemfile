@@ -27,7 +27,7 @@ gem 'activeadmin'
 gem 'cancan'
 gem 'wymeditor-rails', :git => "git://github.com/iffyuva/wymeditor-rails.git"
 
-configure :production do
+group :production do
   require 'newrelic_rpm'
 end
 
