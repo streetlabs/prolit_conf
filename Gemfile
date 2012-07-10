@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'fog'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.8'
+gem "airbrake"
 
 # Gems used only for assets and not required
 # in production environments by default.

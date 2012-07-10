@@ -48,6 +48,9 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.2.8)
+    airbrake (3.1.1)
+      activesupport
+      builder
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bourbon (2.1.1)
@@ -265,6 +268,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  airbrake
   cancan
   capybara
   capybara-webkit
