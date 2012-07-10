@@ -5,7 +5,7 @@ ruby '1.9.3'
 gem 'rails', '3.2.5'
 
 gem 'heroku'
-gem 'pg'
+gem 'mysql2'
 gem 'fog'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.8'
