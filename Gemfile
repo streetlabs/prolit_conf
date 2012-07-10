@@ -33,6 +33,7 @@ group :production do
 end
 
 group :test, :development do
+  gem "pg"
   gem "rspec-rails"
   gem 'pry-rails'
 end
