@@ -27,6 +27,10 @@ gem 'activeadmin'
 gem 'cancan'
 gem 'wymeditor-rails', :git => "git://github.com/iffyuva/wymeditor-rails.git"
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 group :test, :development do
   gem "rspec-rails"
   gem 'pry-rails'
