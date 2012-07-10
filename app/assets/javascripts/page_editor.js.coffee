@@ -10,7 +10,7 @@ class @PageEditor
     @page_content.wymeditor basePath: "/assets/"
 
     @form.submit =>
-      @page_content.html $.wymeditors(0).xhtml()
+      @page_content.val $.wymeditors(0).xhtml()
       true
 
 jQuery ->
