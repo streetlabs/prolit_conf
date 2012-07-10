@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails', '3.2.5'
 
 gem 'heroku'
@@ -33,12 +35,7 @@ end
 group :test do
   gem "factory_girl_rails"
   gem "rspec-rails"
-  gem "rspec"
-  gem "rspec-core"
-  gem "rspec-expectations"
-  gem "rspec-mocks"
   gem 'rack-test'
-  gem 'shoulda'
   gem 'shoulda-matchers'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
