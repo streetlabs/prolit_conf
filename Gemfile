@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby 'ruby-1.9.3'
+ruby '1.9.3'
 
 gem 'rails', '3.2.5'
 
@@ -29,7 +29,7 @@ gem 'cancan'
 gem 'wymeditor-rails', :git => "git://github.com/iffyuva/wymeditor-rails.git"
 
 group :production do
-  require 'newrelic_rpm'
+  gem 'newrelic_rpm'
 end
 
 group :test, :development do
