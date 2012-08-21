@@ -5,7 +5,7 @@ ruby '1.9.3'
 gem 'rails', '3.2.5'
 
 gem 'heroku'
-gem 'mysql2'
+gem "pg"
 gem 'fog'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.8'
@@ -34,7 +34,6 @@ group :production do
 end
 
 group :test, :development do
-  gem "pg"
   gem "rspec-rails"
   gem 'pry-rails'
 end
